@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public Vector3 spawnPosition = new Vector3(0, 1.6f, -0.25f);  // Position to spawn the clone
     public float createBallDelay = 1f;
 
-    private GameObject ball;
+    private GameObject ball = null;
     private bool goCreateBall = false;
     private float delayTimer = 0;
 
@@ -57,6 +57,18 @@ public class GameManager : MonoBehaviour
         createBall();
     }
 
+    public Vector3 getBallPosition()
+    {
+        if(ball)
+        {
+            return ball.transform.position;
+        }
+        else
+        {
+            return Vector3.zero;
+        }
+    }
+
     private void createBall() 
     {
         goCreateBall = true;
@@ -65,7 +77,10 @@ public class GameManager : MonoBehaviour
 
     private void destroyBall() 
     {
-        Destroy(ball.gameObject);
-        ball = null;
+        if(ball)
+        {
+            Destroy(ball.gameObject);
+            ball = null;
+        }
     }
 }
