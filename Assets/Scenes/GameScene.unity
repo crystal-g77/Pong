@@ -132,8 +132,8 @@ GameObject:
   m_Component:
   - component: {fileID: 51428249}
   - component: {fileID: 51428248}
-  - component: {fileID: 51428247}
   - component: {fileID: 51428246}
+  - component: {fileID: 51428250}
   m_Layer: 0
   m_Name: GlobalScripts
   m_TagString: Untagged
@@ -157,19 +157,6 @@ MonoBehaviour:
   spawnPosition: {x: 0, y: 1.6, z: -0.25}
   initialVelocity: {x: -7, y: -2, z: 0}
   createBallDelay: 1
---- !u!114 &51428247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51428245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668b45ad06906f1499b6aad612e1b1c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  createBallScript: {fileID: 51428246}
 --- !u!114 &51428248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +184,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &51428250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51428245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c664b59614f951a4387cd38a496047a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createBallScript: {fileID: 51428246}
+  player1: {fileID: 1324839372}
+  player2: {fileID: 228433032}
 --- !u!1 &121649583
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 2
-  gameScoreScript: {fileID: 51428247}
+  gameManagerScript: {fileID: 51428250}
 --- !u!65 &121649585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -317,6 +319,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &228433032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3904862529487978908, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
+  m_PrefabInstance: {fileID: 1687081156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  gameScoreScript: {fileID: 51428247}
+  gameManagerScript: {fileID: 51428250}
 --- !u!65 &745164462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -728,6 +735,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1324839372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3904862529487978908, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
+  m_PrefabInstance: {fileID: 4046029506938248928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1325218364
 GameObject:
   m_ObjectHideFlags: 0

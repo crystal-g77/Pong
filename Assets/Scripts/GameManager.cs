@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameScore : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public CreateBall createBallScript;
+
+    public GameObject player1;
+    public GameObject player2;
 
     private int[] score = new int[2];
 
