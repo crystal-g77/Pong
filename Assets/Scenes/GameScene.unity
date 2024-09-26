@@ -179,8 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c664b59614f951a4387cd38a496047a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 0}
-  player2: {fileID: 0}
+  player1: {fileID: 634139957}
+  player2: {fileID: 699122904}
   ballToClone: {fileID: 985075831130145290, guid: ce5f5f7b0bb257b4e89473aee3048ff2, type: 3}
   spawnPosition: {x: 0, y: 1.6, z: -0.25}
   createBallDelay: 1
@@ -304,6 +304,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &634139957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3904862529487978908, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
+  m_PrefabInstance: {fileID: 858267496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &699122904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3904862529487978908, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
+  m_PrefabInstance: {fileID: 1981117649}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
