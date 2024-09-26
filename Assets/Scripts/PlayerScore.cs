@@ -6,7 +6,7 @@ public class PlayerScore : MonoBehaviour
 {
     public int player = 0;
 
-    public GameScore gameScoreScript;
+    public GameManager gameManagerScript;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +24,7 @@ public class PlayerScore : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball")) 
         {
-            Destroy(other.gameObject);
-            gameScoreScript.scorePoint(player);
+            gameManagerScript.scorePoint(player);
         }
     }
 }
