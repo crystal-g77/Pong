@@ -24,7 +24,6 @@ public class PlayerScore : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball")) 
         {
-            Destroy(other.gameObject);
             gameManagerScript.scorePoint(player);
         }
     }
