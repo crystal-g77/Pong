@@ -4,7 +4,7 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class InputController : MonoBehaviour
 {
     public int player = 1;
     public float speed = 40f;
