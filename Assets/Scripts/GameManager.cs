@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public TMP_Text text;
     public GameObject player1;
     public GameObject player2;
 
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         score[0] = 0;
         score[1] = 0;
+        text.SetText(score[0] + " : " + score[1]);
 
         createBall();
     }
@@ -53,7 +56,7 @@ public class GameManager : MonoBehaviour
         destroyBall() ;
         Debug.Log("Player " + (player) + " Scored!");
         ++score[player-1];
-        Debug.Log(score[0] + " : " + score[1]);
+        text.SetText(score[0] + " : " + score[1]);
         createBall();
     }
 
