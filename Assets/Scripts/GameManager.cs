@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameData gameData;
     public TMP_Text scoreText;
     public GameObject player1;
     public GameObject player2;
@@ -29,6 +30,12 @@ public class GameManager : MonoBehaviour
         score[0] = 0;
         score[1] = 0;
         scoreText.SetText(score[0] + " : " + score[1]);
+
+        bool temp;
+        if(gameData.getUseAI(out temp))
+        {
+            useAI = temp;
+        }    
 
         player2.GetComponent<InputController>().enabled = !useAI;
         player2.GetComponent<AIController>().enabled = useAI;

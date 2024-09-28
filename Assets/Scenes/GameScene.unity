@@ -133,6 +133,8 @@ GameObject:
   - component: {fileID: 51428249}
   - component: {fileID: 51428248}
   - component: {fileID: 51428250}
+  - component: {fileID: 51428251}
+  - component: {fileID: 51428252}
   m_Layer: 0
   m_Name: GlobalScripts
   m_TagString: Untagged
@@ -179,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c664b59614f951a4387cd38a496047a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameData: {fileID: 51428252}
   scoreText: {fileID: 1200463496}
   player1: {fileID: 858267497}
   player2: {fileID: 1981117650}
@@ -188,6 +191,30 @@ MonoBehaviour:
   createBallDelay: 1
   maxScore: 5
   useAI: 0
+--- !u!114 &51428251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51428245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd4dc4aa12e73c4fb2c7067f01a6f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &51428252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51428245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3654610cb353b48a8de4ed009278a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &121649583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,7 +1258,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1003229956}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 51428252}
+        m_TargetAssemblyTypeName: GameData, Assembly-CSharp
+        m_MethodName: resetUseAI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 51428251}
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FEScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1003229956
 MonoBehaviour:
   m_ObjectHideFlags: 0
