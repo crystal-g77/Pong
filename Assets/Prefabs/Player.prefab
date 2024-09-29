@@ -133,7 +133,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!114 &1076283124246017529
 MonoBehaviour:
@@ -163,6 +163,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  speed: 25
+  speed: 50
   rayDistance: 0.5
-  gameManager: {fileID: 0}
