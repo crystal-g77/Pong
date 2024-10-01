@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
     public GameOver gameOver;
+    public Console console;
 
     public GameObject ballToClone;  // Reference to the object that will be cloned
     public Vector3 spawnPosition = new Vector3(0, 1.6f, -0.25f);  // Position to spawn the clone
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameOver.hide();
+        console.hide();
 
         score[0] = 0;
         score[1] = 0;
@@ -45,6 +47,11 @@ public class GameManager : MonoBehaviour
 
     void Update() 
     {
+        if (Input.GetKeyDown(KeyCode.C)) // Only process if Enter is pressed
+        {
+            console.show();
+        }
+
         if(goCreateBall) 
         {
             delayTimer -= Time.deltaTime;
