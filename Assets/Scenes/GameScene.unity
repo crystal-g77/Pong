@@ -1554,7 +1554,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5090367423525555406, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
       propertyPath: speed
-      value: 25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -5090367423525555406, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
       propertyPath: gameManager
@@ -2919,7 +2919,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5090367423525555406, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
       propertyPath: speed
-      value: 25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -5090367423525555406, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
       propertyPath: player

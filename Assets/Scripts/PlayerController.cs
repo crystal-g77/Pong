@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         DoUpdate();
-        Vector3 v3 = new Vector3(0, moveInput.y, 0) * speed * Time.deltaTime; //convert to 3d space
         Vector3 newPosition = Utils.calculateNewPosition(rb.position, moveInput, speed, rayDistance, c.bounds.extents);
         rb.MovePosition(newPosition);
     }
