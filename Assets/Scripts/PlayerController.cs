@@ -26,9 +26,6 @@ public class PlayerController : MonoBehaviour
         Vector3 newPosition = Utils.calculateNewPosition(rb.position, moveInput, speed, rayDistance, c.bounds.extents);
         rb.MovePosition(newPosition);
     }
-
-    protected virtual void DoStart() {
-    }
     
     protected virtual void DoUpdate() {
     }
