@@ -81,11 +81,27 @@ public class GameManager : MonoBehaviour
         scoreText.SetText(score[0] + " : " + score[1]);
         if(score[0] == maxScore) 
         {
-            gameOver.show("You Won!");
+            if(useAI)
+            {
+                gameOver.show("You Won!");
+            }
+            else
+            {
+                gameOver.show("Player 1 Won!");
+            }
+            gameData.resetUseAI();
         }
         else if(score[1] == maxScore) 
         {
-            gameOver.show("You Lost!");
+            if(useAI)
+            {
+                gameOver.show("You Lost!");
+            }
+            else
+            {
+                gameOver.show("Player 2 Won!");
+            }
+            gameData.resetUseAI();
         }
         else
         {
