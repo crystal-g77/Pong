@@ -27,4 +27,13 @@ public class Utils
 
         return newPosition;
     }
+
+    public static float randomNumber(float lower, float upper){
+        float randomValue = Random.Range(lower, upper);
+        if (Random.Range(0, 2) == 0)
+        {
+            randomValue *= -1;
+        }
+        return randomValue;
+    }
 }
