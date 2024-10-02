@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>(); //get rigidbody, responsible for enabling collision with other colliders'
         c = GetComponent<Collider>();
-        DoStart();
     }
 
 

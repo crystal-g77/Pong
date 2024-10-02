@@ -8,8 +8,6 @@ public class InputController : PlayerController
 {
 
     //create private internal references
-    private Player1InputActions inputActions1;
-    private Player2InputActions inputActions2;
     private InputAction movement;
 
     // Called when movement input is performed
@@ -26,19 +24,20 @@ public class InputController : PlayerController
         moveInput = Vector2.zero;
     }
 
-    protected override void DoStart()
-    {
-        inputActions1 = new Player1InputActions(); //create new InputActions
-        inputActions2 = new Player2InputActions(); //create new InputActions
-    }
-
     //called when script enabled
     private void OnEnable()
     {
         if(player == 2)
+        {
+            
+            Player2InputActions inputActions2 = new Player2InputActions(); //create new InputActions
             movement = inputActions2.Player.Movement; //get reference to movement action
+        }
         else
+        {
+            Player1InputActions inputActions1 = new Player1InputActions(); //create new InputActions
             movement = inputActions1.Player.Movement; //get reference to movement action
+        }
         movement.Enable();
         movement.performed += OnMove;
         movement.canceled += OnMoveCanceled;
