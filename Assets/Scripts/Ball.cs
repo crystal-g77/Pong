@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed = 10f;
     private Rigidbody rb;
+    private float speed;
     private Vector3 lastVelocity;
 
     void Start()
     {
         // Get the Rigidbody component
         rb = GetComponent<Rigidbody>();
-        //rb.velocity = rb.velocity.normalized * speed;
-        Vector3 initialDirection = new Vector3(randomNumber(.45f, .75f), randomNumber(.25f, .55f), 0).normalized;
-        rb.velocity = initialDirection * speed;
-        Debug.Log("Ball velocity: " + rb.velocity);
     }
 
     void FixedUpdate()
@@ -44,12 +40,8 @@ public class Ball : MonoBehaviour
         }
     }
 
-    private float randomNumber(float lower, float upper){
-        float randomValue = Random.Range(lower, upper);
-        if (Random.Range(0, 2) == 0)
-        {
-            randomValue *= -1;
-        }
-        return randomValue;
+    public void setSpeed(float s)
+    {
+        speed = s;
     }
 }

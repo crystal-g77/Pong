@@ -131,7 +131,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 51428249}
-  - component: {fileID: 51428248}
   - component: {fileID: 51428250}
   - component: {fileID: 51428251}
   - component: {fileID: 51428252}
@@ -142,18 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &51428248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 51428245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91486189a6cd046429c2a968f2e0add7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &51428249
 Transform:
   m_ObjectHideFlags: 0
@@ -185,12 +172,14 @@ MonoBehaviour:
   scoreText: {fileID: 1200463496}
   player1: {fileID: 858267497}
   player2: {fileID: 1981117650}
+  background: {fileID: 1320666930}
   gameOver: {fileID: 992299108}
   console: {fileID: 731920275}
   ballToClone: {fileID: 985075831130145290, guid: ce5f5f7b0bb257b4e89473aee3048ff2, type: 3}
   spawnPosition: {x: 0, y: 1.6, z: -0.25}
   createBallDelay: 1
-  maxScore: 5
+  speed: 10
+  maxScore: 10
   useAI: 0
 --- !u!114 &51428251
 MonoBehaviour:
@@ -1090,7 +1079,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 1698556264}
   outputText: {fileID: 568101901}
-  helpCommand: 'Available Commands: help, clear'
+  helpCommand: 'Available Commands: help, clear, bgcolour <hex colour>, ballspeed
+    <int>'
 --- !u!1 &742130541
 GameObject:
   m_ObjectHideFlags: 0
