@@ -94,11 +94,6 @@ public class GameManager : MonoBehaviour
                     rb = ball.AddComponent<Rigidbody>();
                 }
                 
-                Ball b = ball.GetComponent<Ball>();
-                if(b != null)
-                {
-                    ball.GetComponent<Ball>().setSpeed(speed);
-                }
                 Vector3 initialDirection = new Vector3(Utils.randomNumber(.45f, .75f), Utils.randomNumber(.25f, .55f), 0).normalized;
                 rb.velocity = initialDirection * speed;
 
