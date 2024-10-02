@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: 1
   speed: 12
-  rayDistance: 0.5
+  rayDistance: 0.7
 --- !u!114 &-5090367423525555406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,5 +164,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: 1
   speed: 7
-  rayDistance: 0.5
+  rayDistance: 0.7
   gameManager: {fileID: 0}

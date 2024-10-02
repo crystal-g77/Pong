@@ -9,9 +9,8 @@ public class PlayerController : MonoBehaviour
     public float rayDistance = 0.5f; // Distance to check for walls
 
     protected Vector2 moveInput;     // Stores movement input
-
-    private Rigidbody rb;
-    private Collider c;
+    protected Rigidbody rb;
+    protected Collider c;
 
     void Awake()
     {

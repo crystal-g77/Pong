@@ -8,11 +8,13 @@ public class AIController : PlayerController
 
     protected override void DoUpdate()
     {
-        if(gameManager.getBallPosition().y > transform.position.y)
+        Vector3 upperBound = c.bounds.center + new Vector3(0, c.bounds.extents.y, 0);
+        Vector3 lowerBound = c.bounds.center - new Vector3(0, c.bounds.extents.y, 0);
+        if(gameManager.getBallPosition().y > upperBound.y)
         {
             moveInput = Vector2.up;
         }
-        else if(gameManager.getBallPosition().y < transform.position.y)
+        else if(gameManager.getBallPosition().y < lowerBound.y)
         {
             moveInput = Vector2.down;
         }
