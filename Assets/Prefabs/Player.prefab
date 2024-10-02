@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  speed: 10
+  speed: 12
   rayDistance: 0.5
 --- !u!114 &-5090367423525555406
 MonoBehaviour:
@@ -163,6 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  speed: 5
+  speed: 7
   rayDistance: 0.5
   gameManager: {fileID: 0}
