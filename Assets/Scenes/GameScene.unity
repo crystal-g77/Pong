@@ -189,7 +189,7 @@ MonoBehaviour:
   ballToClone: {fileID: 985075831130145290, guid: ce5f5f7b0bb257b4e89473aee3048ff2, type: 3}
   spawnPosition: {x: 0, y: 1.6, z: -0.25}
   createBallDelay: 1
-  maxScore: 5
+  maxScore: 10
   useAI: 0
 --- !u!114 &51428251
 MonoBehaviour:
@@ -968,10 +968,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -5090367423525555406, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 51428250}
     - target: {fileID: -5090367423525555406, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
       propertyPath: speed
       value: 25
