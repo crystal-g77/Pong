@@ -179,7 +179,7 @@ MonoBehaviour:
   spawnPosition: {x: 0, y: 1.6, z: -0.25}
   createBallDelay: 1
   speed: 10
-  maxScore: 10
+  maxScore: 5
   useAI: 0
 --- !u!114 &51428251
 MonoBehaviour:

@@ -19,6 +19,7 @@ public class Console : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             hide();
+            Time.timeScale = 1;
         }
     }
 

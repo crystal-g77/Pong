@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C)) // Only process if Enter is pressed
         {
+            Time.timeScale = 0;
             console.show();
         }
 
