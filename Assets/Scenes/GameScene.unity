@@ -1080,7 +1080,7 @@ MonoBehaviour:
   inputField: {fileID: 1698556264}
   outputText: {fileID: 568101901}
   helpCommand: 'Available Commands: help, clear, bgcolour <hex colour>, ballspeed
-    <int>'
+    <inc/dec>'
 --- !u!1 &742130541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2973,10 +2973,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3576916570438870036, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d986b21de78079d498873ea445bacfce, type: 2}
     - target: {fileID: 3904862529487978908, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 6583492889966011558, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d986b21de78079d498873ea445bacfce, type: 2}
     - target: {fileID: 7412195228164554920, guid: 1bde18529cd1f61418e63108cbe7a21f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

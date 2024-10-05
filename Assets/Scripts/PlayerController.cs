@@ -10,23 +10,45 @@ public class PlayerController : MonoBehaviour
 
     protected Vector2 moveInput;     // Stores movement input
     protected Rigidbody rb;
-    protected Collider c;
+
+    protected Bounds combinedBounds = new Bounds();
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>(); //get rigidbody, responsible for enabling collision with other colliders'
-        c = GetComponent<Collider>();
     }
 
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        DoUpdate();
-        Vector3 newPosition = Utils.calculateNewPosition(rb.position, moveInput, speed, rayDistance, c.bounds.extents);
+        doUpdate();
+        combinedBounds = calculateBounds();
+        Vector3 newPosition = Utils.calculateNewPosition(rb.position, moveInput, speed, rayDistance, combinedBounds.extents);
         rb.MovePosition(newPosition);
     }
     
-    protected virtual void DoUpdate() {
+    protected virtual void doUpdate() {
+    }
+
+    Bounds calculateBounds()
+    {
+        Bounds bounds = GetComponent<Collider>().bounds;
+        Collider[] colliders = GetComponentsInChildren<Collider>();
+        foreach (Collider col in colliders)
+        {
+            bounds.Encapsulate(col.bounds);
+        }
+        return bounds;
+    }
+
+     void OnDrawGizmos()
+    {
+        if (combinedBounds.size != Vector3.zero)
+        {
+            // Draw the combined bounds for debugging
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(combinedBounds.center, combinedBounds.size);
+        }
     }
 }

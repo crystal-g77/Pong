@@ -6,10 +6,10 @@ public class AIController : PlayerController
 {
     public GameManager gameManager;
 
-    protected override void DoUpdate()
+    protected override void doUpdate()
     {
-        Vector3 upperBound = c.bounds.center + new Vector3(0, c.bounds.extents.y, 0);
-        Vector3 lowerBound = c.bounds.center - new Vector3(0, c.bounds.extents.y, 0);
+        Vector3 upperBound = combinedBounds.center + new Vector3(0, combinedBounds.extents.y, 0);
+        Vector3 lowerBound = combinedBounds.center - new Vector3(0, combinedBounds.extents.y, 0);
         if(gameManager.getBallPosition().y > upperBound.y)
         {
             moveInput = Vector2.up;

@@ -7,7 +7,7 @@ public class Console : MonoBehaviour
 {
     public TMP_InputField  inputField;
     public TextMeshProUGUI outputText;
-    public string helpCommand = "Available Commands: help, clear, bgcolour <hex colour>, ballspeed <int>";
+    public string helpCommand = "Available Commands: help, clear, bgcolour <hex colour>, ballspeed <inc/dec>";
 
     void Start()
     {
@@ -55,7 +55,7 @@ public class Console : MonoBehaviour
         {
             outputText.text = "";
         }
-        else if(splitCommand[0] == "bgcolour")
+        else if(splitCommand[0].ToLower() == "bgcolour")
         {
             if(GameManager.Instance != null)
             {
@@ -73,22 +73,25 @@ public class Console : MonoBehaviour
                 }
             }
         }
-        else if(splitCommand[0] == "ballspeed")
+        else if(splitCommand[0].ToLower() == "ballspeed")
         {
             if(GameManager.Instance != null)
-            {      
-                int num;
-                if (int.TryParse(splitCommand[1], out num))
+            {    
+                if (splitCommand[1].ToLower() == "inc")
                 {          
-                    GameManager.Instance.setBallSpeed(num);
-                    outputText.text += "\n>Ball speed changed to: " + splitCommand[1];
-                    outputText.text += "\n>";
+                    GameManager.Instance.incBallSpeed(true);
+                    outputText.text += "\n>Ball speed: " + splitCommand[1];
+                }
+                else if (splitCommand[1].ToLower() == "dec")
+                {          
+                    GameManager.Instance.incBallSpeed(false);
+                    outputText.text += "\n>Ball speed: " + splitCommand[1];
                 }
                 else
                 {
-                    outputText.text += "\n>Unknown speed: " + splitCommand[1];
-                    outputText.text += "\n>";
+                    outputText.text += "\n>Unknown speed option: " + splitCommand[1];
                 }
+                outputText.text += "\n>";
             }
         }
         else

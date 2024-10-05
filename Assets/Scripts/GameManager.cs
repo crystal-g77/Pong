@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -161,9 +162,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void setBallSpeed(float s)
+    public void incBallSpeed(bool up)
     {
-        speed = s;
+        speed = up ? speed+3 : speed-3;
+        speed = Mathf.Clamp(speed, 3, 20);
     }
 
     private void createBall() 

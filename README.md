@@ -8,4 +8,6 @@ The player 2 controls are Up key to move up and Down key to move down or gamepad
 
 Can bring up command console with the 'c' key and close it with the esc key.
 Can change the background colour with the command bgcolour <hex colour>.
-Can change the ball's speed with ballspeed <int>. (The starting speed is 10).
+Can change the ball's speed with ballspeed <inc/dec>. (The starting speed is 8 and goes up/down by 3).
+
+The build is in /Build
